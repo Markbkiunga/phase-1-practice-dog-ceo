@@ -24,5 +24,9 @@ fetch(breedUrl)
       let breedName = document.createElement('li');
       breedName.innerText = breed;
       breedsContainer.appendChild(breedName);
+      //Challenge 3
+      breedName.addEventListener('click', () => {
+        breedName.style.color = 'red';
+      });
     }
   });
