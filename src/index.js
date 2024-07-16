@@ -30,3 +30,13 @@ fetch(breedUrl)
       });
     }
   });
+
+//Challenge 4
+let selection = document.querySelector('#breed-dropdown');
+let selectionValue = selection.value;
+console.log(selectionValue);
+console.log;
+selection.addEventListener('change', () => {
+  newSelectionValue = selection.value;
+  console.log(newSelectionValue);
+});
