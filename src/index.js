@@ -30,13 +30,13 @@ fetch(breedUrl)
       });
     }
   });
-
 //Challenge 4
-let selection = document.querySelector('#breed-dropdown');
-let selectionValue = selection.value;
-console.log(selectionValue);
-console.log;
-selection.addEventListener('change', () => {
-  newSelectionValue = selection.value;
-  console.log(newSelectionValue);
+let firstLetterDropDown = document.querySelector('#breed-dropdown');
+firstLetterDropDown.addEventListener('change', () => {
+  const selectedLetter = firstLetterDropDown.value;
+  Array.from(breedsContainer.getElementsByTagName('li')).forEach((breed) => {
+    breed.style.display = breed.textContent.startsWith(selectedLetter)
+      ? 'list-item'
+      : 'none';
+  });
 });
